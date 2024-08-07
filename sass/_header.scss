@@ -1,0 +1,266 @@
+header {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .header-section-title,
+    .header-section-img-wrap {
+        width: 100%;
+        opacity: 1;
+
+    }
+
+    .header-section-title {
+        height: 60%;
+
+        .title {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            flex-direction: column;
+            padding: 8rem 2rem 3rem;
+
+            .header-h1 {
+                font-family: $MainFont;
+                font-weight: 300;
+                font-size: 4rem;
+                line-height: 5rem;
+                text-align: left;
+                color: $DarkBrown;
+            }
+
+
+        }
+
+    }
+
+    .header-section-img-wrap {
+        position: relative;
+        height: 45%;
+        background-image: url(../images/dog_1280.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img {
+            display: none;
+        }
+    }
+
+    .header-section-img-wrap::after {
+        content: "";
+        position: absolute;
+        top: -6rem;
+        right: 2rem;
+        width: 13rem;
+        height: 10rem;
+        background-image: url(../images/dots-brown\ v2.png);
+        z-index: -1;
+    }
+}
+
+.btn-header {
+    min-width: 15rem;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    // border: .1rem solid $DarkBrown;
+    border: .1rem solid $DarkBrown;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // border: .1rem solid $DarkBrown;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $DarkBrown;
+        font-family: $TextFont;
+        letter-spacing: .2rem;
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media(min-width:820px) {
+    header {
+
+        flex-direction: column;
+
+        // .section-title,
+        // .section-img-wrap {
+        //     width: 100%;
+
+        // }
+
+        .header-section-title {
+            // height: 60%;
+
+            .title {
+
+                padding: 8rem 5rem 3rem;
+
+                .header-h1 {
+
+                    font-size: 5rem;
+                    line-height: 6rem;
+                    padding: 0;
+
+                }
+
+
+            }
+
+        }
+
+        .header-section-img-wrap {
+            position: relative;
+            height: 45%;
+            background-image: url(../images/dog_1280.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            img {
+                display: none;
+            }
+        }
+
+        .header-section-img-wrap::after {
+            content: "";
+            position: absolute;
+            top: -6rem;
+            right: 2rem;
+            width: 13rem;
+            height: 10rem;
+            background-image: url(../images/dots-brown\ v2.png);
+            z-index: -1;
+        }
+    }
+
+    .btn-header {
+        // width: 20rem;
+        height: 5rem;
+        margin-top: 4rem;
+        margin-left: 0;
+
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: .1rem solid $DarkBrown;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $TextFont;
+            letter-spacing: .2rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    header {
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+
+        .header-section-title,
+        .header-section-img-wrap {
+            width: 40%;
+
+
+        }
+
+        .header-section-title {
+            width: 50%;
+
+            .title {
+
+                padding: 5rem 5rem 5rem 10rem;
+                // margin-left: 10rem;
+                // background-color: red;
+
+                .header-h1 {
+
+                    font-size: 6rem;
+                    line-height: 9rem;
+                    // padding: 0;
+                    font-weight: 400;
+
+                }
+
+
+            }
+
+        }
+
+        .header-section-img-wrap {
+
+            height: 60%;
+
+
+            img {
+                display: none;
+            }
+        }
+
+        .header-section-img-wrap::after,
+        .header-section-img-wrap::before {
+            content: "";
+            position: absolute;
+            width: 13rem;
+            height: 10rem;
+            background-image: url(../images/dots-brown\ v2.png);
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .header-section-img-wrap::after {
+
+            top: -5rem;
+            right: -6rem;
+
+        }
+
+        .header-section-img-wrap::before {
+
+            bottom: -5rem;
+            left: -6rem;
+            opacity: .5;
+
+        }
+    }
+
+    .btn-header {
+        // width: 25rem;
+        // height: 6rem;
+
+        margin-top: 5rem;
+        margin-left: 0;
+
+
+        a {
+            padding: 2rem 3rem;
+            letter-spacing: .2rem;
+            font-size: 1.8rem;
+            transition: .2s linear;
+            color: $DarkBrown;
+        }
+
+        a:hover {
+            background-color: $DarkBrown;
+            color: wheat;
+        }
+    }
+}

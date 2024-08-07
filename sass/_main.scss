@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.body-lock {
+    overflow: hidden;
+}
+
+.arrow-go-top {
+    position: fixed;
+    right: 10%;
+    bottom: -10%;
+    width: 5rem;
+    height: 5rem;
+    border: .1rem solid $DarkBrown;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: .7s cubic-bezier(1, 0.8, .5, 1.3)
+}
+
+.arrow-go-top {
+    transform: scale(1.1);
+}
+
+.arrow-go-top-active {
+    bottom: 10%;
+    cursor: pointer;
+}
+
+.enter-anime {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    background-color: $DarkBrown;
+    animation: hide-welcome 5s linear 1 both;
+
+}
+
+.text-container {
+    text-align: center;
+    white-space: nowrap;
+    /* Prevents text from wrapping by default */
+}
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    /* Allows text to wrap */
+}
+
+.line {
+    display: inline-block;
+    /* Ensures each line is inline */
+    margin-bottom: 10px;
+    /* Space between lines */
+    white-space: wrap;
+    transition: .9s linear;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    // transform: translateY(200px);
+    color: white;
+    transition: .4s linear;
+}
+
+@keyframes hide-welcome {
+
+    0% {
+        top: 0;
+        opacity: 1;
+        z-index: 10000;
+    }
+
+    70% {
+        top: 0;
+        opacity: 1;
+    }
+
+    90% {
+        top: 0;
+        opacity: 0;
+    }
+
+    99% {
+        top: -110%;
+        opacity: 0;
+        z-index: 10000;
+    }
+
+    100% {
+        top: -110%;
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
